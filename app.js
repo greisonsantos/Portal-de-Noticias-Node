@@ -12,3 +12,6 @@ app.listen(3000, function(){
 
      console.log(" tudo certo");
 });
+
+//install mysql
+// npm install  mysql --save
