@@ -2,11 +2,27 @@
 	<html lang="pt-br">
 		<head>
 			<meta charset="utf-8"/>
-			<title>Portal de notícias</title>
+			<title>Portal de noticias</title>
 		</head>
 	<body>
 
-		<h1>Bem vindo a página inicial</h1>
+		<h1>Bem vindo a pagina inicial</h1>
+		<table>
+			  <tr>
+				  <td>id</td>
+				  <td>titulo</td>
+				  <td>noticia</td>
+			  </tr>
+			  <%for(var i=0;i< noticias.length; i++){ %>
+			  <tr>
+					<td><%= noticias[i].id %></td>
+					<td><%= noticias[i].titulo%></td>
+					<td><%= noticias[i].noticia%></td>
+			  </tr>
+			  <% }%>
+			
+
+		</table>
 
 	</body>
 </html>
