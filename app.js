@@ -1,22 +1,12 @@
-var express = require('express');  //retorna uma função sem executar
-var app= express();
+var app = require ('./config/server');
 
-app.set('view engine', 'ejs'); //passando para o express que o ejs será o motor de views
+var rotahome = require('./app/routes/home')(app);
+// rotahome(app);
+var rotanoticia = require('./app/routes/noticias')(app);
+// rotanoticia(app);
 
-
-app.get('/tecnologia', function(req, res){
-      res.render("home/index");
-});
-
-app.get('/form_inclusao_noticia', function(req, res){
-      res.render("admin/form_add_noticia");
-});
-
-app.get('/noticias', function(req, res){
-      res.render("noticias/noticias");
-});
-
-
+var rotaformadd = require('./app/routes/form_add_noticia')(app);
+// rotaformadd(app);
 
 app.listen(3000, function(){
 
